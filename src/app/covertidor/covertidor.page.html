@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Convertidor de Monedas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="redireccion('/home')">home</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Cantidad</ion-label>
+      <ion-input type="number" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">De</ion-label>
+      <ion-select [(ngModel)]="fromCurrency">
+        <ion-select-option value="MXN">Pesos Mexicanos (MXN)</ion-select-option>
+        <ion-select-option value="USD">Dólares Americanos (USD)</ion-select-option>
+        <ion-select-option value="JPY">Yen Japonés (JPY)</ion-select-option>
+        <ion-select-option value="EUR">Euros (EUR)</ion-select-option>
+        <ion-select-option value="CNY">Yuan Chino (CNY)</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">A</ion-label>
+      <ion-select [(ngModel)]="toCurrency">
+        <ion-select-option value="MXN">Pesos Mexicanos (MXN)</ion-select-option>
+        <ion-select-option value="USD">Dólares Americanos (USD)</ion-select-option>
+        <ion-select-option value="JPY">Yen Japonés (JPY)</ion-select-option>
+        <ion-select-option value="EUR">Euros (EUR)</ion-select-option>
+        <ion-select-option value="CNY">Yuan Chino (CNY)</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="convert()">Convertir</ion-button>
+
+  <ion-item *ngIf="convertedAmount">
+    <ion-label position="stacked">Resultado</ion-label>
+    <ion-input type="text" disabled value="{{ convertedAmount }}"></ion-input>
+  </ion-item>
+</ion-content>

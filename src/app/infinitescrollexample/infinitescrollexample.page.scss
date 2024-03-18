@@ -1,0 +1,15 @@
+#superior,#inferior{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+ion-input:hover{
+    background: gray;
+}
+
+p{
+    background: gray;
+}

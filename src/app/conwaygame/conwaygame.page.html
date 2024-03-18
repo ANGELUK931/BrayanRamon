@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>conwaygame</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="redireccion('/home')">home</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">conwaygame</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div id="tablero">
+    <div id="fila" *ngFor="let fila of tablero">
+      <div *ngFor="let celula of fila" [id]="'celula-' + celula"></div>
+    </div>
+  </div>
+</ion-content>

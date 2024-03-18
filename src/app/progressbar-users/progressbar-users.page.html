@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>progressbar-users</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="redireccion('/home')">home</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">progressbar-users</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="formulario">
+    <ion-item>
+      <ion-label position="floating">Nombre(s)</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CURP</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Domicilio</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefono</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Institución</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-button>Guardar</ion-button>
+  </div>
+  <ion-button>+</ion-button>
+  <div id="elementos">
+    <ion-item >
+      <!-- *ngFor="let item of items"-->
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <!--nombres-->
+          </ion-col>
+          <ion-col>
+            <!--correo-->
+          </ion-col>
+          <ion-col>
+            <ion-button>Detalles</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </div>
+  <div id="navegacionList">
+    <ion-button ></ion-button>
+    <!--*ngFor="let page of pages" -->
+  </div>
+</ion-content>

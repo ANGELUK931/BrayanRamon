@@ -1,0 +1,18 @@
+#container{
+    text-align: center;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 40%;
+}
+
+//estilo compu
+@media(mex-width: 768px){
+    #container{
+        text-align: center;
+        position: absolute;
+        left: 30%;
+        right: 30%;
+        top: 40%;
+    }
+}

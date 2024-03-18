@@ -1,0 +1,20 @@
+#fila{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+#celula0{
+    width: 5px;
+    height: 5px;
+    margin: 0px;
+}
+
+#celula0 {
+    background: #d1d412;
+}
+
+#celula1 {
+    background: #000000;
+}
+

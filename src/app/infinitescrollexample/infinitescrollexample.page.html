@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>infinitescrollexample</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">infinitescrollexample</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="superior">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input [(ngModel)]="categoria"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Proovedor</ion-label>
+      <ion-input [(ngModel)]="proovedor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input [(ngModel)]="precio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input [(ngModel)]="cantidad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">idStock</ion-label>
+      <ion-input [(ngModel)]="idStock"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="guardar()">enviar</ion-button>
+  </div>
+
+  <div id="container">
+  </div>
+
+  <div id="scrollcontainer">
+    <ion-list id="lista">
+      <ion-item *ngfor="let item of items; let index ">
+        <ion-avatar slot="start">
+          <img [src]="'https://picsum.photos/80/80?random='+index"/>
+        </ion-avatar>
+        <ion-text slot="start">Nuevo Mensaje</ion-text>
+        <ion-text slot="end">{{item.hora}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+  
+</ion-content>
